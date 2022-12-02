@@ -3,4 +3,5 @@ applications:
    memory: 2.5G       # Sets memory limit of the app
    disk_quota: 2.5G   # Allocates disk space to the app
    random-route: true
+   timeout: 600
    command: python app.py
