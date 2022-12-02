@@ -200,7 +200,10 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
         ),
         title: Text(
           'Complete Profile',
-          style: FlutterFlowTheme.of(context).title3,
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Bodoni Moda',
+                fontSize: 30,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -222,7 +225,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                 image: DecorationImage(
                   fit: BoxFit.fitWidth,
                   image: Image.asset(
-                    'assets/images/Untitled_design.png',
+                    'assets/images/9hsjc_2.png',
                   ).image,
                 ),
               ),
@@ -336,7 +339,12 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                           children: [
                             Text(
                               'Your Birth Sex',
-                              style: FlutterFlowTheme.of(context).bodyText1,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Colors.white,
+                                  ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation']!),
                           ],
@@ -349,28 +357,37 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                           children: [
                             Align(
                               alignment: AlignmentDirectional(0, 0),
-                              child: FlutterFlowRadioButton(
-                                options:
-                                    ['Male', 'Female', 'Undisclosed'].toList(),
-                                onChanged: (val) =>
-                                    setState(() => radioButtonValue = val),
-                                optionHeight: 25,
-                                textStyle:
-                                    FlutterFlowTheme.of(context).bodyText2,
-                                selectedTextStyle:
-                                    FlutterFlowTheme.of(context).bodyText1,
-                                textPadding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
-                                buttonPosition: RadioButtonPosition.left,
-                                direction: Axis.horizontal,
-                                radioButtonColor: Color(0xFF477905),
-                                inactiveRadioButtonColor:
-                                    FlutterFlowTheme.of(context).grayLight,
-                                toggleable: false,
-                                horizontalAlignment: WrapAlignment.center,
-                                verticalAlignment: WrapCrossAlignment.start,
-                              ).animateOnPageLoad(animationsMap[
-                                  'radioButtonOnPageLoadAnimation']!),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                                child: FlutterFlowRadioButton(
+                                  options: ['Male', 'Female', 'Undisclosed']
+                                      .toList(),
+                                  onChanged: (val) =>
+                                      setState(() => radioButtonValue = val),
+                                  optionHeight: 25,
+                                  textStyle:
+                                      FlutterFlowTheme.of(context).bodyText2,
+                                  selectedTextStyle:
+                                      FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Outfit',
+                                            color: Colors.white,
+                                          ),
+                                  textPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 15, 0),
+                                  buttonPosition: RadioButtonPosition.left,
+                                  direction: Axis.horizontal,
+                                  radioButtonColor: Color(0xFF477905),
+                                  inactiveRadioButtonColor:
+                                      FlutterFlowTheme.of(context).grayLight,
+                                  toggleable: false,
+                                  horizontalAlignment: WrapAlignment.center,
+                                  verticalAlignment: WrapCrossAlignment.start,
+                                ).animateOnPageLoad(animationsMap[
+                                    'radioButtonOnPageLoadAnimation']!),
+                              ),
                             ),
                           ],
                         ),
@@ -411,7 +428,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                               options: FFButtonOptions(
                                 width: 230,
                                 height: 50,
-                                color: Color(0xFF477905),
+                                color: Color(0xFF4B844F),
                                 textStyle:
                                     FlutterFlowTheme.of(context).subtitle2,
                                 elevation: 3,

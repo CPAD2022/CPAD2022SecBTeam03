@@ -45,6 +45,11 @@ abstract class FlutterFlowTheme {
   late Color grayLight;
   late Color primaryBtnText;
   late Color lineColor;
+  late Color grayIcon;
+  late Color gray200;
+  late Color gray600;
+  late Color black600;
+  late Color tertiary400;
 
   String get title1Family => typography.title1Family;
   TextStyle get title1 => typography.title1;
@@ -65,14 +70,14 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  late Color primaryColor = const Color(0xFF4B39EF);
-  late Color secondaryColor = const Color(0xFFFBAF7C);
-  late Color tertiaryColor = const Color(0xFF39D2C0);
+  late Color primaryColor = const Color(0xFF78937A);
+  late Color secondaryColor = const Color(0xFFFFFFFF);
+  late Color tertiaryColor = const Color(0xFF4B844F);
   late Color alternate = const Color(0xFFFFFFFF);
   late Color primaryBackground = const Color(0xFFF1F4F8);
   late Color secondaryBackground = const Color(0xFFFFFFFF);
-  late Color primaryText = const Color(0xFF1A1F24);
-  late Color secondaryText = const Color(0xFF8B97A2);
+  late Color primaryText = const Color(0xFF000000);
+  late Color secondaryText = const Color(0xFF215725);
 
   late Color background = Color(0xFF1A1F24);
   late Color darkBackground = Color(0xFF111417);
@@ -81,6 +86,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color grayLight = Color(0xFF8B97A2);
   late Color primaryBtnText = Color(0xFFFFFFFF);
   late Color lineColor = Color(0xFFE0E3E7);
+  late Color grayIcon = Color(0xFF95A1AC);
+  late Color gray200 = Color(0xFFDBE2E7);
+  late Color gray600 = Color(0xFF262D34);
+  late Color black600 = Color(0xFF090F13);
+  late Color tertiary400 = Color(0xFF39D2C0);
 }
 
 abstract class Typography {
@@ -105,9 +115,9 @@ class ThemeTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get title1Family => 'Outfit';
+  String get title1Family => 'Bodoni Moda';
   TextStyle get title1 => GoogleFonts.getFont(
-        'Outfit',
+        'Bodoni Moda',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 32,
@@ -157,8 +167,8 @@ class ThemeTypography extends Typography {
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
-  late Color primaryColor = const Color(0xFF4B39EF);
-  late Color secondaryColor = const Color(0xFFFBAF7C);
+  late Color primaryColor = const Color(0xFF78937A);
+  late Color secondaryColor = const Color(0xFFFFFFFF);
   late Color tertiaryColor = const Color(0xFF39D2C0);
   late Color alternate = const Color(0xFFFFFFFF);
   late Color primaryBackground = const Color(0xFF1A1F24);
@@ -173,6 +183,11 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color grayLight = Color(0xFF8B97A2);
   late Color primaryBtnText = Color(0xFFFFFFFF);
   late Color lineColor = Color(0xFF22282F);
+  late Color grayIcon = Color(0xFF95A1AC);
+  late Color gray200 = Color(0xFFDBE2E7);
+  late Color gray600 = Color(0xFF262D34);
+  late Color black600 = Color(0xFF090F13);
+  late Color tertiary400 = Color(0xFF39D2C0);
 }
 
 extension TextStyleHelper on TextStyle {

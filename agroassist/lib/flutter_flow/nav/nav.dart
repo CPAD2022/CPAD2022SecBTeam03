@@ -107,6 +107,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : ScanPlantWidget(),
             ),
             FFRoute(
+              name: 'Prediction',
+              path: 'prediction',
+              builder: (context, params) => PredictionWidget(
+                predction: params.getParam('predction', ParamType.JSON),
+              ),
+            ),
+            FFRoute(
               name: 'community',
               path: 'community',
               builder: (context, params) => params.isEmpty
@@ -116,6 +123,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'answers',
               path: 'answers',
+              requireAuth: true,
               builder: (context, params) => AnswersWidget(
                 question: params.getParam('question',
                     ParamType.DocumentReference, false, 'questions'),

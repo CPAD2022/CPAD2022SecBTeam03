@@ -1,10 +1,13 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,13 +27,41 @@ class AnswersWidget extends StatefulWidget {
   _AnswersWidgetState createState() => _AnswersWidgetState();
 }
 
-class _AnswersWidgetState extends State<AnswersWidget> {
+class _AnswersWidgetState extends State<AnswersWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'columnOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 730.ms,
+          begin: Offset(0, -60),
+          end: Offset(0, 0),
+        ),
+      ],
+    ),
+    'columnOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 730.ms,
+          begin: Offset(0, -60),
+          end: Offset(0, 0),
+        ),
+      ],
+    ),
+  };
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
+
     textController = TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -45,9 +76,9 @@ class _AnswersWidgetState extends State<AnswersWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+      backgroundColor: FlutterFlowTheme.of(context).textColor,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: Color(0xFF78937A),
         automaticallyImplyLeading: false,
         title: Column(
           mainAxisSize: MainAxisSize.max,
@@ -97,21 +128,35 @@ class _AnswersWidgetState extends State<AnswersWidget> {
                     width: double.infinity,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: Color(0xF10B3C6C),
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           widget.asker!,
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Outfit',
+                                color:
+                                    FlutterFlowTheme.of(context).darkBackground,
+                              ),
                         ),
                         Text(
                           widget.qsnText!,
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Outfit',
+                                color:
+                                    FlutterFlowTheme.of(context).darkBackground,
+                              ),
                         ),
                       ],
-                    ),
+                    ).animateOnPageLoad(
+                        animationsMap['columnOnPageLoadAnimation1']!),
                   ),
                 ),
                 StreamBuilder<List<AnswersRecord>>(
@@ -150,10 +195,11 @@ class _AnswersWidgetState extends State<AnswersWidget> {
                             width: double.infinity,
                             height: 100,
                             decoration: BoxDecoration(
-                              color: Color(0xFF9B7D43),
+                              color: Color(0xFF477905),
                             ),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   listViewAnswersRecord.name!,
@@ -169,7 +215,8 @@ class _AnswersWidgetState extends State<AnswersWidget> {
                                   style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
                               ],
-                            ),
+                            ).animateOnPageLoad(
+                                animationsMap['columnOnPageLoadAnimation2']!),
                           ),
                         );
                       },

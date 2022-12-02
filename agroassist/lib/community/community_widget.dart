@@ -132,7 +132,7 @@ class _CommunityWidgetState extends State<CommunityWidget> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(6),
                                         child: Image.network(
-                                          'https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
+                                          'https://firebasestorage.googleapis.com/v0/b/agroassist-cc17f.appspot.com/o/png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper.png?alt=media&token=e0602019-df8a-4c9c-91a4-36422056285a',
                                           width: 80,
                                           height: 80,
                                           fit: BoxFit.cover,

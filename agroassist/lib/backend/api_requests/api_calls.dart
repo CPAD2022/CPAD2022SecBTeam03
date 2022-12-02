@@ -10,15 +10,16 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class PredictCall {
   static Future<ApiCallResponse> call({
-    String? abc = '',
+    String? imagePath = '',
   }) {
     final body = '''
 {
-  "imageUrl": "${abc}"
+  "URL": "${imagePath}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'predict',
-      apiUrl: 'http://127.0.0.1:5000/predict',
+      apiUrl:
+          'https://apppy-timely-wallaby-jv.cfapps.us10-001.hana.ondemand.com/predict',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
