@@ -22,7 +22,7 @@ def predict():
     if request.method == 'POST':
         try:
             
-            # Fecth image from URL
+            # Fetch image from URL
             
             # print("REQUEST  TYPE:", type(request.data))
             # print("---------", request.data)
