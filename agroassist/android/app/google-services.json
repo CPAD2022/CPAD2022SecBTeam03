@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "371797301782",
+    "project_id": "agroassist-cc17f",
+    "storage_bucket": "agroassist-cc17f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371797301782:android:90566399053e3a7a67f337",
+        "android_client_info": {
+          "package_name": "com.example.proj1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371797301782-lqqgcvmk5j3aa5sh8t25jflpicmur0pg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proj1",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "371797301782-ok9pn9epu5j8a9ntfl96dnkv40jjpeeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH8kpu5kb-R-4pgZswpgfBQHJzaSFyqyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371797301782-ok9pn9epu5j8a9ntfl96dnkv40jjpeeq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "371797301782-t96jsd8rmvk6eb4e6ao7ggsivrcmtjg8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.team3.agroassist"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371797301782:android:4ea10470344aaa3b67f337",
+        "android_client_info": {
+          "package_name": "com.team3.agroassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371797301782-pr98u5ftbd85pha9n0167gd3bf3farge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team3.agroassist",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "371797301782-ok9pn9epu5j8a9ntfl96dnkv40jjpeeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH8kpu5kb-R-4pgZswpgfBQHJzaSFyqyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371797301782-ok9pn9epu5j8a9ntfl96dnkv40jjpeeq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "371797301782-t96jsd8rmvk6eb4e6ao7ggsivrcmtjg8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.team3.agroassist"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
