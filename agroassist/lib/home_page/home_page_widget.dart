@@ -81,7 +81,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   Align(
                     alignment: AlignmentDirectional(1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 10, 0),
                       child: InkWell(
                         onTap: () async {
                           GoRouter.of(context).prepareAuthEvent();
@@ -90,9 +90,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           context.goNamedAuth('loginPage', mounted);
                         },
                         child: Image.asset(
-                          'assets/images/Screenshot_2022-12-02_134459-removebg-preview_(1).png',
-                          width: 100,
-                          height: 100,
+                          'assets/images/MicrosoftTeams-image_(12).png',
+                          width: 50,
+                          height: 50,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -101,9 +101,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                     child: Text(
-                      'Hello!',
+                      'agro assist',
                       textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).title1,
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Bodoni Moda',
+                            color: Color(0xFF477905),
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ),
                   Padding(

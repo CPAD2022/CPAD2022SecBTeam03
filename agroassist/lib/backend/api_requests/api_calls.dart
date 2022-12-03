@@ -19,7 +19,7 @@ class PredictCall {
     return ApiManager.instance.makeApiCall(
       callName: 'predict',
       apiUrl:
-          'https://apppy-timely-wallaby-jv.cfapps.us10-001.hana.ondemand.com/predict',
+          'https://apppy-balanced-bongo-on.cfapps.us10-001.hana.ondemand.com/predict',
       callType: ApiCallType.POST,
       headers: {},
       params: {},

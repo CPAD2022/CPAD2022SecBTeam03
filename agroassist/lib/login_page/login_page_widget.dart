@@ -114,7 +114,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                 if (Theme.of(context).brightness ==
                                     Brightness.dark)
                                   Image.asset(
-                                    'assets/images/health-ai_logoVert.png',
+                                    'assets/images/blank_img.png',
                                     width: 200,
                                     height: 130,
                                     fit: BoxFit.fitHeight,
@@ -133,7 +133,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                     labelColor: FlutterFlowTheme.of(context)
                                         .darkBackground,
                                     unselectedLabelColor:
-                                        FlutterFlowTheme.of(context).grayLight,
+                                        FlutterFlowTheme.of(context).textColor,
                                     labelPadding:
                                         EdgeInsetsDirectional.fromSTEB(
                                             24, 0, 24, 0),

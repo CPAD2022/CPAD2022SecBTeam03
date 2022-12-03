@@ -306,7 +306,7 @@ class FFRoute {
                   color: Colors.transparent,
                   child: Image.asset(
                     'assets/images/9hsjc_2.png',
-                    fit: BoxFit.contain,
+                    fit: BoxFit.fill,
                   ),
                 )
               : page;

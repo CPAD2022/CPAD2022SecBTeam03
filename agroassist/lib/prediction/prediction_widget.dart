@@ -48,8 +48,18 @@ class _PredictionWidgetState extends State<PredictionWidget>
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  InkWell(
+                    onTap: () async {
+                      context.pop();
+                    },
+                    child: Icon(
+                      Icons.arrow_back_outlined,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                  ),
                   Align(
-                    alignment: AlignmentDirectional(0.05, 0.05),
+                    alignment: AlignmentDirectional(-0.1, -0.05),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(40, 50, 0, 0),
                       child: Text(
@@ -81,7 +91,7 @@ class _PredictionWidgetState extends State<PredictionWidget>
                       'Lexend Deca',
                       color: FlutterFlowTheme.of(context).primaryText,
                       fontWeight: FontWeight.w200,
-                      fontSize: 45,
+                      fontSize: 25,
                     ),
                   ),
                 ),
@@ -139,35 +149,11 @@ class _PredictionWidgetState extends State<PredictionWidget>
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
-                    child: Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                        child: FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 70,
-                          borderWidth: 1,
-                          buttonSize: 60,
-                          icon: Icon(
-                            Icons.arrow_back_outlined,
-                            color: Color(0xFF215725),
-                            size: 30,
-                          ),
-                          onPressed: () async {
-                            context.pop();
-                          },
-                        ),
-                      ),
-                    ),
                   ),
                 ),
                 Container(
                   width: double.infinity,
-                  height: 400,
+                  height: 600,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
@@ -176,6 +162,22 @@ class _PredictionWidgetState extends State<PredictionWidget>
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
+                        Text(
+                          'Cause',
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Outfit',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                        ),
+                        Text(
+                          getJsonField(
+                            widget.predction,
+                            r'''$.Cause''',
+                          ).toString(),
+                          style: FlutterFlowTheme.of(context).bodyText1,
+                        ),
                         Text(
                           'Prevention',
                           textAlign: TextAlign.center,
@@ -196,6 +198,37 @@ class _PredictionWidgetState extends State<PredictionWidget>
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context).bodyText1,
                           ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 10,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                                child: FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 70,
+                                  borderWidth: 1,
+                                  buttonSize: 60,
+                                  icon: Icon(
+                                    Icons.arrow_back_outlined,
+                                    color: Color(0xFF215725),
+                                    size: 30,
+                                  ),
+                                  onPressed: () async {
+                                    context.pop();
+                                  },
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
