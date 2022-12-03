@@ -23,6 +23,7 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget>
     with TickerProviderStateMixin {
+      //adding the animation to the page loding
   final animationsMap = {
     'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
@@ -45,6 +46,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
+
 
   @override
   Widget build(BuildContext context) {
