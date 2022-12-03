@@ -1,0 +1,9 @@
+numpy
+pandas
+Flask
+requests
+Pillow
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.7.1+cpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.8.2+cpu
